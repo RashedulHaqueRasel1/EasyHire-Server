@@ -135,7 +135,7 @@ async function run() {
 
 
 
-        // Read & Show Data Clint Side .
+        // Read & Show Data Clint Side ...
         app.get('/allJobs', async (req, res) => {
             const cursor = allJobsCollection.find();
             const result = await cursor.toArray();
@@ -175,7 +175,7 @@ async function run() {
 
 
 
-        // Jobs Data Delete
+        // Jobs Data Delete ...
         app.delete('/allJobs/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
