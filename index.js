@@ -79,7 +79,7 @@ async function run() {
 
 
         // JWT Auth Related Api
-        app.post('/jwt', async (req, res) => {
+        app.post('/jwt',  async (req, res) => {
             const user = req.body;
             // console.log(user)
             const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
@@ -99,7 +99,6 @@ async function run() {
             // const user = req.body
             res.clearCookie("token", { ...cookieOptions, maxAge: 0 }).send({ success: true })
         })
-
         const cookieOptions = {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
