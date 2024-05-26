@@ -145,7 +145,7 @@ async function run() {
 
 
 
-        //   View Details Page 
+        //   View Details Page ...
         app.get('/allJobs/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
@@ -156,7 +156,7 @@ async function run() {
 
 
 
-        // Find myJobs Data With Email ..
+        // Find myJobs Data With Email ...
         app.get('/allJobss/:email', async (req, res) => {
             const result = await allJobsCollection.find({ email: req.params.email }).toArray();
             res.send(result)
@@ -164,13 +164,11 @@ async function run() {
 
 
 
-        // Find applyJobs Data With Email ..
+        // Find applyJobs Data With Email ...
         app.get('/applyJobss/:email', async (req, res) => {
             const result = await applyJobsCollection.find({ email: req.params.email }).toArray();
             res.send(result)
         })
-
-
 
 
 
@@ -180,7 +178,7 @@ async function run() {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
             const result = await allJobsCollection.deleteOne(query);
-            res.send(result)
+            res.send(result);
         })
 
 
@@ -218,9 +216,6 @@ async function run() {
     }
 }
 run().catch(console.dir);
-
-
-
 
 
 
