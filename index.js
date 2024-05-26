@@ -9,9 +9,9 @@ const cookieParser = require('cookie-parser')
 
 
 
-// middleWare
+// middleWare....
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', 'https://easyhire-rasel.web.app'],
     credentials: true
 }))
 app.use(express.json());
@@ -79,7 +79,7 @@ async function run() {
 
 
         // JWT Auth Related Api
-        app.post('/jwt',  async (req, res) => {
+        app.post('/jwt', async (req, res) => {
             const user = req.body;
             // console.log(user)
             const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
