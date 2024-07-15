@@ -54,5 +54,6 @@ To get a local copy up and running, follow these simple steps.
      MONGODB_URI=your_mongodb_uri
      JWT_SECRET=your_jwt_secret
 
-   5. Run the server:
+5. Run the server:
+   ```sh
       nodemon index.js
