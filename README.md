@@ -50,7 +50,7 @@ To get a local copy up and running, follow these simple steps.
    npm install
 
 4. Set up environment variables:
-   ``sh
+   ```sh
      MONGODB_URI=your_mongodb_uri
      JWT_SECRET=your_jwt_secret
 
